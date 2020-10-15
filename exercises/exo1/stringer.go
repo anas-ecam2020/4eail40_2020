@@ -7,7 +7,7 @@ import (
 
 type Shape interface {
 	Area() float64
-	String() string
+	fmt.Stringer
 }
 
 type Rectangle struct {
