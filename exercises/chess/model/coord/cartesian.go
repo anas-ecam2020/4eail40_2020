@@ -14,14 +14,13 @@ func NewCartesian(x, y int) Cartesian {
 
 // Coord returns x if n==0, y if n==1
 func (c Cartesian) Coord(n int) (int, error) {
-	switch n {
-	case 0:
+	if n == 0 {
 		return c.x, nil
-	case 1:
+	} else if n == 1 {
 		return c.y, nil
-
+	} else {
+		return 0, fmt.Errorf("Unknown coord component %d", n)
 	}
-	return 0, fmt.Errorf("unknown coord component %d", n)
 }
 
 func (c Cartesian) String() string {
