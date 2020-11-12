@@ -56,6 +56,11 @@ func TestCartesian_String(t *testing.T) {
 			Cartesian{7, 7},
 			"H8",
 		},
+		{
+			"C6",
+			Cartesian{2, 5},
+			"C6",
+		},
 	}
 
 	for _, tt := range tests {

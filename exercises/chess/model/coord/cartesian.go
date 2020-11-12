@@ -24,5 +24,5 @@ func (c Cartesian) Coord(n int) (int, error) {
 }
 
 func (c Cartesian) String() string {
-	return fmt.Sprintf("%c%d", 65+c.y, c.x+1)
+	return fmt.Sprintf("%c%d", 65+c.x, c.y+1)
 }
